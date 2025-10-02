@@ -108,7 +108,7 @@ export const video = (() => {
                         .default()
                         .then(resToVideo)
                         .catch((err) => {
-                            bar.style.backgroundColor = 'red';
+                            // bar.style.backgroundColor = 'red';
                             inf.innerText = `Error loading video`;
                             console.error(err);
                         })

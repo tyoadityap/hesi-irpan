@@ -324,59 +324,66 @@ export const guest = (() => {
         const vid = video.init();
         const img = image.init();
         const aud = audio.init();
-        const lib = loaderLibs();
-        const token = document.body.getAttribute('data-key');
-        const params = new URLSearchParams(window.location.search);
+        // const lib = loaderLibs();
+        // const token = document.body.getAttribute('data-key');
+        // const params = new URLSearchParams(window.location.search);
 
         window.addEventListener('resize', util.debounce(slide));
-        document.addEventListener('undangan.progress.done', () => booting());
+        // document.addEventListener('undangan.progress.done', () => booting());
+        // document.addEventListener('undangan.progress.done', () => {});
+        animateSvg();
+        countDownDate();
+        // showGuestName();
+        modalImageClick();
+        normalizeArabicFont();
+        buildGoogleCalendar();
         document.addEventListener('hide.bs.modal', () => document.activeElement?.blur());
         document.getElementById('button-modal-download').addEventListener('click', (e) => {
             img.download(e.currentTarget.getAttribute('data-src'));
         });
 
-        if (!token || token.length <= 0) {
-            document.getElementById('comment')?.remove();
-            document.querySelector('a.nav-link[href="#comment"]')?.closest('li.nav-item')?.remove();
+        // if (!token || token.length <= 0) {
+        //     document.getElementById('comment')?.remove();
+        //     document.querySelector('a.nav-link[href="#comment"]')?.closest('li.nav-item')?.remove();
 
-            vid.load();
-            img.load();
-            aud.load();
-            lib.load({ confetti: document.body.getAttribute('data-confetti') === 'true' });
-        }
+        //     vid.load();
+        //     img.load();
+        //     aud.load();
+        //     lib.load({ confetti: document.body.getAttribute('data-confetti') === 'true' });
+        // }
 
-        if (token && token.length > 0) {
-            // add 2 progress for config and comment.
-            // before img.load();
-            progress.add();
-            progress.add();
+        // if (token && token.length > 0) {
+        //     // add 2 progress for config and comment.
+        //     // before img.load();
+        //     progress.add();
+        //     progress.add();
 
-            // if don't have data-src.
-            if (!img.hasDataSrc()) {
-                img.load();
-            }
+        //     // if don't have data-src.
+        //     if (!img.hasDataSrc()) {
+        //         img.load();
+        //     }
 
-            // fetch after document is loaded.
-            const load = () => session.guest(params.get('k') ?? token).then(({ data }) => {
-                document.dispatchEvent(new Event('undangan.session'));
-                progress.complete('config');
+        //     // fetch after document is loaded.
+        //     const load = () => session.guest(params.get('k') ?? token).then(({ data }) => {
+        //         document.dispatchEvent(new Event('undangan.session'));
+        //         progress.complete('config');
 
-                if (img.hasDataSrc()) {
-                    img.load();
-                }
+        //         if (img.hasDataSrc()) {
+        //             img.load();
+        //         }
 
-                vid.load();
-                aud.load();
-                lib.load({ confetti: data.is_confetti_animation });
+        //         vid.load();
+        //         aud.load();
+        //         lib.load({ confetti: data.is_confetti_animation });
 
-                comment.show()
-                    .then(() => progress.complete('comment'))
-                    .catch(() => progress.invalid('comment'));
+        //         comment.show()
+        //             .then(() => progress.complete('comment'))
+        //             .catch(() => progress.invalid('comment'));
 
-            }).catch(() => progress.invalid('config'));
+        //     }).catch(() => progress.invalid('config'));
 
-            window.addEventListener('load', load);
-        }
+        //     window.addEventListener('load', load);
+        // }
     };
 
     /**
@@ -384,15 +391,15 @@ export const guest = (() => {
      */
     const init = () => {
         theme.init();
-        session.init();
+        // session.init();
 
-        if (session.isAdmin()) {
-            storage('user').clear();
-            storage('owns').clear();
-            storage('likes').clear();
-            storage('session').clear();
-            storage('comment').clear();
-        }
+        // if (session.isAdmin()) {
+        //     storage('user').clear();
+        //     storage('owns').clear();
+        //     storage('likes').clear();
+        //     storage('session').clear();
+        //     storage('comment').clear();
+        // }
 
         document.addEventListener('DOMContentLoaded', domLoaded);
 

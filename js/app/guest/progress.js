@@ -61,7 +61,7 @@ export const progress = (() => {
     const invalid = (type) => {
         if (valid && !isDone) {
             valid = false;
-            bar.style.backgroundColor = 'red';
+            // bar.style.backgroundColor = 'red';
             info.innerText = `Error loading ${type} ${showInformation()}`;
             document.dispatchEvent(new Event('undangan.progress.invalid'));
         }
@@ -78,7 +78,7 @@ export const progress = (() => {
     const init = () => {
         info = document.getElementById('progress-info');
         bar = document.getElementById('progress-bar');
-        info.classList.remove('d-none');
+        // info.classList.remove('d-none');
         cancelProgress = new Promise((res) => document.addEventListener('undangan.progress.invalid', res));
     };
 
