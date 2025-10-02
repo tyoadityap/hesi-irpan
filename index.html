@@ -15,6 +15,7 @@
   <meta name="apple-mobile-web-app-title" content="Website Undangan Pernikahan Hesi dan Irpan">
   <link rel="canonical" href="https://ulems.my.id/">
 
+
   <!-- Icons -->
   <link rel="icon" href="https://ulems.my.id/assets/favicon.ico">
   <link rel="apple-touch-icon" href="https://ulems.my.id/assets/images/icon-192x192.png">
@@ -33,23 +34,42 @@
 
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
 
-  <!-- CSS Dependencies -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" 
-        integrity="sha256-2FMn2Zx6PuH5tdBQDRNwrOo60ts5wWPC9R8jK67b3t4=" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.0.0/css/all.min.css" 
-        integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
-  <link rel="stylesheet" href="./css/guest.css">
+<!-- CSS Dependencies -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" 
+      integrity="sha256-2FMn2Zx6PuH5tdBQDRNwrOo60ts5wWPC9R8jK67b3t4=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.0.0/css/all.min.css" 
+      integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
+
+<!-- Custom CSS (letakkan paling terakhir supaya override dependency) -->
+ <!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./css/guest.css">
+
 
   <!-- JS Dependencies -->
   <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" 
           integrity="sha256-5P1JGBOIxI7FBAvT/mb1fCnI5n/NhQKzNUuW7Hq0fMc=" crossorigin="anonymous"></script>
   <script defer src="./dist/guest.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.0.0/css/all.min.css">
+    <style>
+        .btn-transparent {
+            background: transparent;
+            border: none;
+        }
+        .spin-button {
+            animation: spin 2s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg);}
+            100% { transform: rotate(360deg);}
+        }
+    </style>
 </head>
 
 
-<body data-key="d9faced3377732b0edf19e90d1bde0cd5de04801c75eb41743" data-url="https://api.ulems.my.id/" data-audio="./assets/music/pure-love-304010.mp3" data-confetti="true" data-time="2025-10-31 09:00:00">
+<body data-key="d9faced3377732b0edf19e90d1bde0cd5de04801c75eb41743" data-url="https://api.ulems.my.id/" data-audio="assets/music/pure-love-304010.mp3" data-confetti="true" data-time="2025-10-31 09:00:00">
 
     <div class="row m-0 p-0 opacity-0" id="root">
 
@@ -342,13 +362,13 @@
 
                                 <div class="carousel-inner rounded-4">
                                     <div class="carousel-item active">
-                                        <img src="./assets/images/cewe.jpeg" fetchpriority="high" decoding="async" alt="image 1" onclick="undangan.guest.modal(this)" class="img-center-crop rounded-circle border border-3 border-light shadow my-4 mx-auto cursor-pointer">
+                                        <img src="./assets/images/cewe.jpg" fetchpriority="high" decoding="async" alt="image 1" onclick="undangan.guest.modal(this)" class="img-center-crop rounded-circle border border-3 border-light shadow my-4 mx-auto cursor-pointer">
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="./assets/images/cewe.jpeg" fetchpriority="high" decoding="async" alt="image 2" class="d-block img-fluid cursor-pointer" onclick="undangan.guest.modal(this)">
+                                        <img src="./assets/images/cewe.jpg" fetchpriority="high" decoding="async" alt="image 2" class="d-block img-fluid cursor-pointer" onclick="undangan.guest.modal(this)">
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="./assets/images/cewe.jpeg" fetchpriority="high" decoding="async" alt="image 3" class="d-block img-fluid cursor-pointer" onclick="undangan.guest.modal(this)">
+                                        <img src="./assets/images/cewe.jpg" fetchpriority="high" decoding="async" alt="image 3" class="d-block img-fluid cursor-pointer" onclick="undangan.guest.modal(this)">
                                     </div>
                                 </div>
 
@@ -372,13 +392,13 @@
 
                                 <div class="carousel-inner rounded-4">
                                     <div class="carousel-item active">
-                                        <img src="./assets/images/placeholder.webp" fetchpriority="high" decoding="async" alt="image 4" class="d-block img-fluid cursor-pointer" onclick="undangan.guest.modal(this)">
+                                        <img src="./assets/images/cewe.jpg" fetchpriority="high" decoding="async" alt="image 4" class="d-block img-fluid cursor-pointer" onclick="undangan.guest.modal(this)">
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="./assets/images/placeholder.webp" fetchpriority="high" decoding="async" alt="image 5" class="d-block img-fluid cursor-pointer" onclick="undangan.guest.modal(this)">
+                                        <img src="./assets/images/cewe.jpg" fetchpriority="high" decoding="async" alt="image 5" class="d-block img-fluid cursor-pointer" onclick="undangan.guest.modal(this)">
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="./assets/images/placeholder.webp" fetchpriority="high" decoding="async" alt="image 6" class="d-block img-fluid cursor-pointer" onclick="undangan.guest.modal(this)">
+                                        <img src="./assets/images/cewe.jpg" fetchpriority="high" decoding="async" alt="image 6" class="d-block img-fluid cursor-pointer" onclick="undangan.guest.modal(this)">
                                     </div>
                                 </div>
 
@@ -647,6 +667,57 @@
         <button type="button" id="button-music" class="btn bg-light-dark border btn-sm rounded-circle d-none btn-transparent shadow-sm mt-3" aria-label="Change audio" data-offline-disabled="false">
             <i class="fa-solid fa-circle-pause spin-button"></i>
         </button>
+        <script>
+        (function() {
+            const statePlay = '<i class="fa-solid fa-circle-play spin-button"></i>';
+            const statePause = '<i class="fa-solid fa-circle-pause spin-button"></i>';
+
+            const load = async (playOnOpen = true) => {
+                const url = document.body.getAttribute('data-audio');
+                if (!url) return;
+
+                const audioEl = new Audio(url);
+                audioEl.loop = true;
+                audioEl.muted = false;
+                audioEl.autoplay = false;
+                audioEl.controls = false;
+
+                let isPlay = false;
+                const music = document.getElementById('button-music');
+
+                const play = async () => {
+                    if (!navigator.onLine || !music) return;
+
+                    music.disabled = true;
+                    try {
+                        await audioEl.play();
+                        isPlay = true;
+                        music.disabled = false;
+                        music.innerHTML = statePlay;
+                    } catch (err) {
+                        isPlay = false;
+                        console.error(err);
+                    }
+                };
+
+                const pause = () => {
+                    isPlay = false;
+                    audioEl.pause();
+                    music.innerHTML = statePause;
+                };
+
+                // tampilkan tombol saat halaman siap
+                window.addEventListener('DOMContentLoaded', () => {
+                    music.classList.remove('d-none');
+                    if (playOnOpen) play();
+                });
+
+                music.addEventListener('click', () => isPlay ? pause() : play());
+            };
+
+            load(); // panggil fungsi load langsung
+        })();
+    </script>
     </div>
 
     <!-- Loading Page -->
